@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription aux clubs</title>
+</head>
+<body>
+    <h1>Inscription aux clubs de l'ISTIC</h1>
+    <form action="traitement.php" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br>
+
+        <label for="email">E-mail :</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="etablissement">Établissement :</label>
+        <input type="text" id="etablissement" name="etablissement" value="ISTIC" disabled><br>
+
+        <label for="motdepasse">Mot de passe :</label>
+        <input type="password" id="motdepasse" name="motdepasse" required><br>
+
+        <label for="club">Choisissez un club :</label>
+        <select id="club" name="club">
+            <option value="scientifiques">Clubs scientifiques</option>
+            <option value="sports">Clubs de sports</option>
+            <option value="ieee">IEEE Juniors</option>
+            <option value="houdini">Houdini</option>
+        </select><br>
+
+        <label>Mode de réception des notifications :</label><br>
+        <input type="radio" id="emailnotif" name="notifications" value="email">
+        <label for="emailnotif">E-mail</label><br>
+        <input type="radio" id="smsnotif" name="notifications" value="sms">
+        <label for="smsnotif">SMS</label><br>
+
+        <input type="checkbox" id="facebook" name="facebook" value="oui">
+        <label for="facebook">Inscription au club Facebook X (optionnel)</label><br>
+
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Réinitialiser">
+    </form>
+</body>
+</html>
